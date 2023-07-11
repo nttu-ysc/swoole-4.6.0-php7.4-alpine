@@ -1,5 +1,5 @@
 FROM phpswoole/swoole:4.6.0-php7.4-alpine
-WORKDIR /var/www
+RUN composer self-update
 RUN wget https://github.com/swoole/ext-postgresql/archive/refs/tags/v4.6.1.tar.gz \
     && tar -xvf v4.6.1.tar.gz
 RUN apk update
